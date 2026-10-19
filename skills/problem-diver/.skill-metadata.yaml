@@ -1,0 +1,104 @@
+examples:
+  - id: event-review
+    title:
+      zh: 复盘一件没做好的事
+      en: Review something that went wrong
+    description:
+      zh: 方案被否/汇报搞砸/面试挂了，想找原因和改进方法
+      en: A rejected proposal, a botched presentation, a failed interview — find causes and fixes
+    prompt:
+      zh: |-
+        帮我复盘一件没做好的事：
+
+        事件：{{发生了什么}}
+        目标与结果的差距：{{预期 vs 实际}}
+        过程关键节点：{{哪几步}}
+        他人反馈原话：{{如果有}}
+
+        先还原事件、定位卡点，再选 1 个最合适的框架分析根因，最后给下次可执行的最小行动。
+      en: |-
+        Help me review something that went wrong:
+
+        Event: {{what happened}}
+        Gap between goal and result: {{expected vs actual}}
+        Key steps in the process: {{which steps}}
+        Verbatim feedback from others: {{if any}}
+
+        Reconstruct the event, locate the sticking points, pick ONE suitable framework for root cause, then give a minimal actionable step for next time.
+
+  - id: expression-chaos
+    title:
+      zh: 解决表达/汇报抓不住重点
+      en: Fix unfocused expression/reporting
+    description:
+      zh: PPT/汇报/写作没条理、抓不住重点、思路跳脱
+      en: Messy PPT/report/writing, can't grasp the point, jumping thoughts
+    prompt:
+      zh: |-
+        我的表达/汇报总是抓不住重点：
+
+        具体场景：{{例如：做 PPT、开会汇报}}
+        别人的反馈：{{原话}}
+        一个最近的例子：{{那次怎么乱的}}
+
+        用金字塔原理帮我诊断结构问题，给出可操作的改法。
+      en: |-
+        My expression/reports never grasp the point:
+
+        Specific context: {{e.g., making PPT, reporting in meetings}}
+        Feedback from others: {{verbatim}}
+        A recent example: {{how it went wrong}}
+
+        Use the Pyramid Principle to diagnose the structural problem and give actionable fixes.
+
+  - id: decision-analysis
+    title:
+      zh: 分析一个要不要做的决定
+      en: Analyze a should-I-do-it decision
+    description:
+      zh: 辞职/搬家/换行等选项的利弊与风险分析
+      en: Pros/cons and risk analysis for quitting/moving/changing careers
+    prompt:
+      zh: |-
+        帮我分析一个决定：
+
+        我在纠结的选择：{{选项 A vs 选项 B}}
+        各选项的最好/最可能/最坏结果：{{你的估计}}
+        这个决定的可逆性：{{能否撤回、成本多大}}
+        决策时限：{{真的需要现在定吗}}
+
+        用 Issue Tree + Inversion 分析，做偏差快扫和事前验尸，但不替我做决定。
+      en: |-
+        Help me analyze a decision:
+
+        The choice I'm weighing: {{option A vs option B}}
+        Best/likely/worst outcome for each: {{your estimate}}
+        Reversibility: {{can it be undone, at what cost}}
+        Deadline: {{do I really need to decide now}}
+
+        Use Issue Tree + Inversion, run a bias scan and premortem, but don't decide for me.
+
+  - id: dual-thread
+    title:
+      zh: 事+情绪交织的复盘
+      en: Review where task and emotion intertwine
+    description:
+      zh: 一件事没做好，且明显带情绪/抵触，想两条线一起理
+      en: Something went wrong AND there's clear emotion/resistance; untangle both threads
+    prompt:
+      zh: |-
+        我有一件事既没做好、又带着强烈情绪：
+
+        事情本身：{{发生了什么、结果如何}}
+        情绪成分：{{我的抵触/难受，强度多少}}
+        两者的关系：{{是不是情绪影响了做事，做事又加重了情绪}}
+
+        用双线程协议帮我同时理事线和人线，最后画因果环、指出打破点。
+      en: |-
+        I have something that both went wrong and carries strong emotion:
+
+        The task itself: {{what happened, the outcome}}
+        The emotional part: {{my resistance/distress, intensity}}
+        How they relate: {{did emotion affect the task, and the task worsen emotion}}
+
+        Use the dual-thread protocol to handle both the task thread and the person thread, then draw the causal loop and point out the breaking point.

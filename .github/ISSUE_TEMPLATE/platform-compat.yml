@@ -1,0 +1,42 @@
+name: 平台兼容 / Platform Compatibility
+description: 某平台安装失败、frontmatter 不识别、路径不适配等 / Install or runtime issues on a specific platform
+title: "[Platform] "
+labels: ["platform"]
+body:
+  - type: input
+    id: platform
+    attributes:
+      label: 平台与版本 / Platform & version
+      placeholder: e.g. QwenWork 1.2.3 / Claude Code 0.5 / WorkBuddy
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 出问题的环节 / Where it failed
+      options:
+        - 安装 install（脚本/手动）
+        - frontmatter 解析
+        - 技能未被触发 not triggered
+        - 档案路径 archive path
+        - 按需加载 reference loading
+        - 其他 other
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 详情 / Details
+      placeholder: 错误信息、截图、你试过的办法
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统 / OS
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true

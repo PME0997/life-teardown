@@ -1,0 +1,121 @@
+examples:
+  - id: behavior-origin
+    title:
+      zh: 拆解一个反复出现的行为
+      en: Unpack a recurring behavior
+    description:
+      zh: 想知道某个习惯/行为从哪来、什么条件下发作
+      en: Trace where a habit comes from and when it triggers
+    prompt:
+      zh: |-
+        帮我拆解一个我反复出现的行为：
+
+        行为描述：{{例如：一到要做正事就刷手机}}
+        明显发作的场景：{{1-2 个具体场景}}
+        不发作的场景：{{对照场景}}
+
+        先帮我画出行为模式，不急着给改进建议。
+      en: |-
+        Help me unpack a recurring behavior:
+
+        Behavior: {{e.g., I scroll my phone whenever I need to do real work}}
+        When it clearly happens: {{1-2 specific situations}}
+        When it doesn't: {{contrast situations}}
+
+        Map the pattern first; don't rush to advice.
+
+  - id: motive-dig
+    title:
+      zh: 挖掘行为背后的动机
+      en: Dig into the motive behind a behavior
+    description:
+      zh: 追问"我为什么会这样"，找行为背后的心理逻辑
+      en: Ask "why do I do this" and find the psychological logic
+    prompt:
+      zh: |-
+        我想搞清楚自己为什么会有某种反应：
+
+        我的行为/想法：{{描述}}
+        我自己现有的解释：{{你的归因，标为待验证}}
+
+        帮我挖背后的动机，给假设而不是结论。
+      en: |-
+        I want to understand why I react a certain way:
+
+        My behavior/thought: {{describe}}
+        My current explanation: {{your attribution, marked unverified}}
+
+        Dig into the motive; give hypotheses, not verdicts.
+
+  - id: pattern-verify
+    title:
+      zh: 验证我对自己的归因
+      en: Verify a self-attribution
+    description:
+      zh: 我对自己下了个结论，想检验它站不站得住
+      en: I concluded something about myself; test whether it holds
+    prompt:
+      zh: |-
+        我对自己有个判断，想验证它是否成立：
+
+        我的结论：{{例如：我就是天生懒}}
+        支撑这个结论的事例：{{列举}}
+
+        帮我做证伪测试和换位测试，给明确裁决。
+      en: |-
+        I have a judgment about myself and want to verify it:
+
+        My conclusion: {{e.g., I'm just naturally lazy}}
+        Evidence I cite: {{list}}
+
+        Run falsification and perspective tests; give a clear verdict.
+
+  - id: relationship
+    title:
+      zh: 拆解一段关系的冲突模式
+      en: Unpack a relationship conflict pattern
+    description:
+      zh: 与父母/家人/朋友/同事/室友的反复冲突
+      en: Recurring conflicts with parents/family/friends/colleagues/roommates
+    prompt:
+      zh: |-
+        帮我拆解我和{{某人}}的冲突模式：
+
+        最近 2-3 次冲突经过：{{谁说了什么、怎么收场}}
+        这个模式持续多久了：{{时间}}
+        我期望的"处理好"是什么样：{{你的定义}}
+
+        只拆互动结构，不替我站队。
+      en: |-
+        Help me unpack the conflict pattern with {{someone}}:
+
+        Last 2-3 conflicts: {{who said what, how it ended}}
+        How long this pattern has lasted: {{time}}
+        What "handling it well" means to me: {{your definition}}
+
+        Analyze the interaction structure only; don't take sides.
+
+  - id: intimacy
+    title:
+      zh: 分析亲密关系中的反应
+      en: Analyze reactions in a romantic relationship
+    description:
+      zh: 恋爱/暧昧中"我为什么会有这种反应""这正常吗"
+      en: In dating/romance, "why do I react this way" / "is this normal"
+    prompt:
+      zh: |-
+        帮我分析我在亲密关系中的一个反应：
+
+        具体事件：{{只讲事实：发生了什么、对方说了/做了什么}}
+        我的解读：{{我加上的推断}}
+        我的感受和强度：{{情绪 + 0-100}}
+
+        帮我拆事实/解读/感受三栏，判断这是否需要调整。
+      en: |-
+        Help me analyze a reaction in my romantic relationship:
+
+        Specific event: {{facts only: what happened, what they said/did}}
+        My interpretation: {{the inference I added}}
+        My feeling and intensity: {{emotion + 0-100}}
+
+        Split into facts/interpretation/feeling; judge whether it needs adjusting.

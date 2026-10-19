@@ -1,0 +1,57 @@
+name: Bug 报告 / Bug Report
+description: 技能行为异常、分析逻辑错误、档案写入失败等 / Something isn't working as expected
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 哪个技能 / Which skill
+      options:
+        - behavior-analyst
+        - problem-diver
+        - both / 两者
+        - install / packaging / 安装打包
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台 / Platform
+      options:
+        - WorkBuddy
+        - QwenWork
+        - Claude Code / Desktop
+        - Cursor
+        - Other / 其他
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为 / Expected behavior
+      placeholder: 你以为会发生什么
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为 / Actual behavior
+      placeholder: 实际发生了什么，附上对话片段（请匿名化）
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤 / Steps to reproduce
+      placeholder: 输入了什么、第几轮、路由到哪个子技能
+  - type: checkboxes
+    id: antisycophancy
+    attributes:
+      label: 是否涉及反谄媚失效 / Anti-sycophancy failure
+      options:
+        - label: 输出了无依据的判断 / judgment without cited evidence
+        - label: 出现了普遍化安慰 / generic comfort ("这很正常")
+        - label: 被反驳就改口 / caved when pushed back
+        - label: 漏掉强制状态页脚 / missing status footer
+        - label: 以上都不是 / none of these

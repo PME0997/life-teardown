@@ -1,0 +1,44 @@
+name: 功能建议 / Feature Request
+description: 新子技能、新框架、新平台支持等 / New sub-skill, framework, or platform support
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提之前请先读 [DESIGN-NOTES.md](../../DESIGN-NOTES.md)。
+        **注意**：任何为了"用户体验"而软化分析、削弱反谄媚内核的建议，会被原则性拒绝。
+        本工具的价值在诚实，不在讨好。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决的问题 / Problem to solve
+      placeholder: 现在哪个场景没被覆盖，或哪个流程不顺
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 你的建议 / Your proposal
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 影响范围 / Scope
+      options:
+        - 新子技能 new sub-skill
+        - 新方法论框架 new framework
+        - 新平台支持 new platform
+        - 记忆层 memory layer
+        - 安全协议 safety protocol
+        - 其他 other
+    validations:
+      required: true
+  - type: checkboxes
+    id: integrity
+    attributes:
+      label: 反谄媚完整性自检 / Anti-sycophancy integrity check
+      options:
+        - label: 这个建议不会让分析变得更迎合 / this won't make analysis more sycophantic
+          required: true

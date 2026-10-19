@@ -1,0 +1,57 @@
+name: 案例反馈 / Case Feedback
+description: 提交一次真实分析会话，帮助观察期验证 / Share an analysis session to help validation
+title: "[Case] "
+labels: ["case", "validation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢贡献案例！这是 VALIDATION-PLAN.md 观察期指标的核心数据来源。
+        **请务必匿名化**：人名用张三/李四，公司用 XX 公司，去掉可识别细节。
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 使用的技能 / Skill used
+      options:
+        - behavior-analyst
+        - problem-diver
+        - dual-thread / 双线程
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: 你的输入（匿名化）/ Your input (anonymized)
+    validations:
+      required: true
+  - type: dropdown
+    id: routing
+    attributes:
+      label: 路由是否正确 / Was routing correct
+      options:
+        - 正确 / correct
+        - 错误，应去另一个技能 / wrong, should be the other skill
+        - 触发了边界澄清 / boundary clarification fired
+        - 没触发任何技能 / nothing triggered
+    validations:
+      required: true
+  - type: textarea
+    id: output_quality
+    attributes:
+      label: 输出质量 / Output quality
+      placeholder: 结论是否挂了你的原话？置信度是否合理？有没有谄媚或无依据判断？
+    validations:
+      required: true
+  - type: dropdown
+    id: converge
+    attributes:
+      label: （双线程）是否收敛 / (dual-thread) did it converge
+      options:
+        - 画出因果环+指出打破点 / causal loop + breaking point
+        - 画了环但没打破点 / loop only
+        - 没收敛 / no convergence
+        - 不适用 / N/A
+  - type: textarea
+    id: notes
+    attributes:
+      label: 其他备注 / Notes

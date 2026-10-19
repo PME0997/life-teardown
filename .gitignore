@@ -1,0 +1,17 @@
+# 构建产物
+dist/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 安装脚本自动备份
+*.bak.*
+
+# 内部构建记录（不公开；本地保留供参考，含本机路径）
+PROGRESS.md
