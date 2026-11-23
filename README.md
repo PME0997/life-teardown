@@ -14,9 +14,9 @@ The kit contains two independent skills: **behavior-analyst** (行为分析师) 
 
 盒子里的两个技能平级独立：**behavior-analyst**（行为分析师）拆「人」——你的情绪、习惯、动机与关系；**problem-diver**（困难拆解师）拆「事」——某件事为什么没做好、下次怎么做好。每条判断都必须引用你的原话、标注置信度，并连同「什么新证据会推翻它」一起写进本地档案：结论随新证据被复核、取代或推翻——被推翻的也保留，因为它揭示你自我解释的惯用偏差。
 
-Everything runs locally. One line installs it on WorkBuddy, QwenWork (千问办公), or Claude Code — no API keys, no cloud account, your archive never leaves your machine. The methods are grounded in 60+ academic sources, from Steel's procrastination meta-analysis to Bowen family systems. If you want comfort, ask any chatbot; if you want to know what's actually going on, keep reading.
+Everything runs locally. One line installs it on WorkBuddy, QwenWork (千问办公), or Claude Code — no API keys, no cloud account, your archive never leaves your machine. The methods are grounded in 60+ sources — 30+ academic papers, from Steel's procrastination meta-analysis to Bowen family systems, plus open-source projects, methodology texts and industry reports. If you want comfort, ask any chatbot; if you want to know what's actually going on, keep reading.
 
-所有数据都在本地。一行命令即可装到 WorkBuddy、QwenWork（千问办公）或 Claude Code——不需要 API key、不需要云端账号，档案永不离开你的电脑。方法论背后有 60+ 篇学术来源支撑，从 Steel 的拖延元分析到 Bowen 家庭系统理论。想要安慰，随便找个聊天机器人；想弄清楚到底发生了什么，请往下读。
+所有数据都在本地。一行命令即可装到 WorkBuddy、QwenWork（千问办公）或 Claude Code——不需要 API key、不需要云端账号，档案永不离开你的电脑。方法论背后有 60+ 条来源支撑——其中 30+ 篇学术论文，从 Steel 的拖延元分析到 Bowen 家庭系统理论，其余为开源项目、方法论著作与行业报告。想要安慰，随便找个聊天机器人；想弄清楚到底发生了什么，请往下读。
 
 ---
 
@@ -53,13 +53,13 @@ They are **independent and never load each other** — with one exception: when 
 ## What makes it different · 它凭什么不一样
 
 - **Anti-sycophancy core (7 rules)** — fact/defense separation, every judgment must cite your verbatim words, "this part is fine" is allowed, three-level confidence, no generic comfort, resists caving when you push back, mandatory status footer every turn.
-- **Evidence-based** — grounded in 60+ academic sources: Steel's procrastination meta-analysis, Bowen family systems, Barrett's emotional granularity, Gendlin's focusing, EFT/Gottman, Weiner attribution, Self-Determination Theory, Kahneman. See [REFERENCES.md](REFERENCES.md).
+- **Evidence-based** — grounded in 60+ sources (30+ academic papers: Steel's procrastination meta-analysis, Bowen family systems, Barrett's emotional granularity, Gendlin's focusing, EFT/Gottman, Weiner attribution, Self-Determination Theory, Kahneman; plus open-source projects, methodology texts and industry reports). See [REFERENCES.md](REFERENCES.md).
 - **Memory with falsifiers** — every stored conclusion must carry a falsification condition. Conclusions aren't appended blindly; they're reviewed, superseded (`superseded_by` chains), or overturned — and overturned ones are *kept*, because they reveal your habitual attribution biases.
 - **Two archives, one-way outbox** — write-permission isolation prevents a one-off task conclusion from polluting your long-term behavioral profile.
 - **Safety by "guide, don't block"** — self-harm signals get a graded one-line prompt (never an interruption, never a refusal); relationship violence is the single exception that stops technique-style analysis. See the shared safety protocol.
 
 - **反谄媚内核（7 条）**——事实与辩护分离、判断必挂你的原话、允许说"这部分没问题"、置信度三级、禁止普遍化安慰、你反驳也不轻易改口、每轮输出末尾强制状态页脚。
-- **循证依据**——60+ 学术来源：Steel 拖延元分析、Bowen 家庭系统、Barrett 情绪粒度、Gendlin 聚焦疗法、EFT/Gottman、Weiner 归因、自我决定理论、卡尼曼。详见 [REFERENCES.md](REFERENCES.md)。
+- **循证依据**——60+ 条来源（30+ 篇学术论文：Steel 拖延元分析、Bowen 家庭系统、Barrett 情绪粒度、Gendlin 聚焦疗法、EFT/Gottman、Weiner 归因、自我决定理论、卡尼曼；另含开源项目、方法论著作与行业报告）。详见 [REFERENCES.md](REFERENCES.md)。
 - **带证伪条件的记忆**——每条存档结论必须挂"什么新证据会推翻它"。结论不是无脑追加，而是被复核、被取代（superseded_by 链）、或被推翻——被推翻的也保留，因为它揭示你自我解释的惯用偏差。
 - **双档案 + 单向 outbox**——写入权限隔离，防止一次性的「事」结论污染你长期的「人」画像。
 - **安全边界「堵不如疏」**——自伤信号只做分级一行提示（绝不中断、绝不拒答）；关系暴力是唯一例外（停止沟通技巧式分析）。
@@ -124,7 +124,7 @@ life-teardown/
 ├── examples/               # anonymized real analysis sessions / 匿名化真实分析案例
 ├── scripts/                # install.sh / install.ps1 / validate.py
 ├── DESIGN-NOTES.md         # full design rationale (V1→V5) / 完整设计思路（V1→V5 演化）
-├── REFERENCES.md           # 60+ academic & open-source sources / 60+ 学术与开源来源
+├── REFERENCES.md           # 60+ sources: academic / open-source / methodology / industry / 60+ 条来源：学术/开源/方法论/行业
 └── VALIDATION-PLAN.md      # observation-period metrics / 观察期指标
 ```
 
