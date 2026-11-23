@@ -1,6 +1,6 @@
 # 记忆层规范（L3）
 
-档案根目录：`<档案根>/behavior-archive/`（档案根解析规则见 SKILL.md「运行时平台适配」节；默认 `~/.life-teardown/`，可被环境变量 `$LIFE_TEARDOWN_ROOT` 覆盖）
+档案根目录：`<档案根>/behavior-archive/`（档案根解析规则见 SKILL.md「运行时平台适配」节；默认按平台取值，可被环境变量 `$LIFE_TEARDOWN_ROOT` 覆盖）
 
 ```
 behavior-archive/

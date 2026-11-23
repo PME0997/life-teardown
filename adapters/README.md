@@ -9,7 +9,7 @@
 3. 用编辑器把 `skills/<技能名>/SKILL.md` 顶部 `---` 到 `---` 之间的内容，替换为对应平台的 frontmatter
 4. 正文（frontmatter 以下）保持不变
 
-> 一键安装脚本 `scripts/install.sh` / `install.ps1` 会自动检测平台并应用对应覆盖，无需手动替换。本目录是给"想手动装"或"脚本检测失败"的用户准备的。
+> 一键安装脚本 `scripts/install.sh` / `install.ps1` 会自动检测平台并复制技能，但**不会**自动替换 frontmatter。如需平台原生 UI，请按下方用法手动应用对应覆盖；不替换也能正常使用。
 
 ## 各平台差异
 

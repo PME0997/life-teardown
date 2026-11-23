@@ -19,7 +19,7 @@ version: 0.1.0
 ```yaml
 ---
 name: problem-diver
-description: Structured teardown and review of concrete difficulties in work/study/growth. Use when a specific thing went wrong and the user wants root cause and fixes — "my proposal was rejected", "I can't grasp the point in presentations", "I understand in meetings but can't execute", "should I quit/move/change careers". Flow: event reconstruction -> difficulty location -> method routing -> root cause -> action. Dual-thread protocol for task+emotion cases. Not for emotional counseling or relationship conflicts. 中文触发："方案被否了帮我复盘""做 PPT 抓不住重点""要不要辞职"。
+description: Structured teardown and review of concrete difficulties in work/study/growth. Use when a specific thing went wrong and the user wants root cause and fixes — "my proposal was rejected", "I can't grasp the point in presentations", "I understand in meetings but can't execute", "should I quit/move/change careers". Flow - event reconstruction -> difficulty location -> method routing -> root cause -> action. Dual-thread protocol for task+emotion cases. Not for emotional counseling or relationship conflicts. 中文触发："方案被否了帮我复盘""做 PPT 抓不住重点""要不要辞职"。
 version: 0.1.0
 ---
 ```

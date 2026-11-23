@@ -15,7 +15,10 @@ fi
 for skill in behavior-analyst problem-diver; do
   DEST="$ROOT/skills/$skill/references/shared"
   mkdir -p "$DEST"
-  cp "$SRC"/*.md "$DEST"/
+  # 只同步两个内核文件；不要复制 shared-src/README.md（那是源目录说明，不属于分发副本）
+  for f in anti-sycophancy-core.md safety-protocol.md; do
+    cp "$SRC/$f" "$DEST/$f"
+  done
   echo "  synced -> skills/$skill/references/shared/"
 done
 

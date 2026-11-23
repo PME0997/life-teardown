@@ -46,6 +46,8 @@ for s in $SKILLS; do
   if [ -d "$SKILL_DIR/$s" ]; then
     cp -r "$SKILL_DIR/$s" "$SKILL_DIR/$s.bak.$(date +%s)"
     echo "    (existing $s backed up)"
+    # 必须删除旧目录再复制：cp -r 到已存在目录会嵌套成 skill/skill/（加载失败）
+    rm -rf "$SKILL_DIR/$s"
   fi
   cp -r "$SRC/skills/$s" "$SKILL_DIR/$s"
   # 4. Apply platform frontmatter override if available

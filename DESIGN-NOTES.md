@@ -167,6 +167,8 @@
 ~/.workbuddy/behavior-archive/    ← 人档案（behavior-analyst 私有，原有）
 ```
 
+> 注：以上为设计期路径示意。实际档案根以 SKILL.md「运行时平台适配」解析结果为准（平台默认路径或 `$LIFE_TEARDOWN_ROOT`），两档案归并于同一根目录下。
+
 ### 5.2 四个优化补丁
 
 | 补丁 | 解决的问题 | 借鉴来源 |

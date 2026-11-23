@@ -13,6 +13,10 @@
 - **Generative Agents: Interactive Simulacra of Human Behavior** — Joon Sung Park 等（Stanford & Google，2023）— reflection 机制（定期把观察整合为高层结论），档案层"画像层（profile）每 5 条整合趋势"的灵感来源 — https://arxiv.org/abs/2304.03442
 - **Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory** — Mem0 团队（2024，arXiv）— 记忆整合管线（冲突检测、更新而非追加，报告 +26% 效果提升），superseded_by 取代链设计的参考 — https://arxiv.org/abs/2504.19413 （年份/编号待核实）
 - **Zep: A Temporal Knowledge Graph Architecture for Agent Memory** — Zep 团队（2025，arXiv）— 记忆的时效性与失效处理思想，contradicts 字段与时序取代链的借鉴对象 — https://arxiv.org/abs/2501.13956 （待核实）
+- **MemGPT（后发展为 Letta）** — Packer 等（UC Berkeley，2023）— 分层记忆与自编辑记忆思想 — https://arxiv.org/abs/2310.08560
+- **Why Do Multi-Agent LLM Systems Fail?（MAST）** — 多智能体系统 14 种失败模式研究（1600+ 轨迹标注）— 放弃多智能体并行方案、采用单持球人设计的依据 — （arXiv 编号待核实）
+- **Anthropic: Building Effective Agents** — Anthropic 工程博客（2024）— workflow vs agent 的区分、路由/并行/编排模式目录 — https://www.anthropic.com/engineering/building-effective-agents
+- **Anthropic: Multi-agent research system 工程复盘** — Anthropic（2025-06）— 多智能体 token 消耗约 15 倍的数据来源，"默认单视角、值得才双线程"决策的依据 — https://www.anthropic.com/engineering/built-multi-agent-research-system （待核实）
 - **How Are Habits Formed: Modelling Habit Formation in the Real World** — Phillippa Lally, Cornelia van Jaarsveld, Henry Potts & Jane Wardle（UCL，2010，European Journal of Social Psychology）— 习惯固化中位 66 天（18-254 天）、"漏做一天无碍"，用于 `sub-change-plan.md` 预期校准 — https://doi.org/10.1002/ejsp.674
 - **习惯的双控制模式研究（动机控制 vs 线索控制）** — Wendy Wood（USC，多篇综述）— "已自动化习惯靠动机干预基本无效、自制力=环境设计"的策略分流依据 — （待核实，可参考 Wood & Rünger 2016, Annual Review of Psychology, https://doi.org/10.1146/annurev-psych-122414-033417）
 - **The Behaviour Change Wheel: A New Method for Characterising and Designing Behaviour Change Interventions（COM-B 模型）** — Susan Michie 等（UCL，2011，Implementation Science）— 能力/机会/动机三要素，用于改变规划方案组装 — https://doi.org/10.1186/1748-5908-6-42

@@ -16,6 +16,8 @@ mkdir -p "$OUT"
 cd "$ROOT/skills"
 for skill in behavior-analyst problem-diver; do
   # 从 skills/ 打包，条目为 skillname/...（无多余嵌套）
+  # 先删旧 zip：zip -rq 对已存在归档是"更新"，会残留已删除文件的陈旧条目
+  rm -f "$OUT/$skill.zip"
   zip -rq "$OUT/$skill.zip" "$skill"
   echo "Created $OUT/$skill.zip"
 done

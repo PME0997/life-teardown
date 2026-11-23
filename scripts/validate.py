@@ -191,6 +191,65 @@ def check_shared_sync(root, errors):
             ok(f"{fname}: {len(blobs)} copies byte-identical")
 
 
+ADAPTER_REQUIRED = ["name", "description", "version"]
+
+
+def check_adapters(root, errors):
+    """Parse every platform adapter frontmatter block with a real YAML parser.
+
+    Adapters are markdown docs embedding ```yaml blocks. A ': ' inside an
+    unquoted description scalar breaks strict YAML loaders on QwenWork/Claude
+    (the exact bug class that once shipped in skills/ and later recurred in
+    adapters/). validate previously only checked skills/, leaving adapters as
+    a CI blind spot; this closes it.
+    """
+    print("[adapters]")
+    adir = os.path.join(root, "adapters")
+    if not os.path.isdir(adir):
+        fail(errors, "adapters: adapters/ directory missing")
+        return
+    names = set()
+    for plat in sorted(os.listdir(adir)):
+        p = os.path.join(adir, plat, "SKILL.frontmatter.md")
+        if not os.path.isfile(p):
+            continue
+        text = open(p, encoding="utf-8").read()
+        blocks = re.findall(r"```yaml\n(.*?)```", text, re.DOTALL)
+        if not blocks:
+            fail(errors, f"adapters/{plat}: no yaml frontmatter blocks found")
+        for i, b in enumerate(blocks):
+            raw = b.strip().strip("-").strip()
+            if yaml:
+                try:
+                    fm = yaml.safe_load(raw)
+                except Exception as e:
+                    fail(errors, f"adapters/{plat} block {i+1}: YAML parse error: {e}")
+                    continue
+            else:
+                fm = {}
+                for line in raw.splitlines():
+                    km = re.match(r"^([A-Za-z0-9_-]+):[ \t](.*)$", line)
+                    if not km:
+                        continue
+                    key, val = km.group(1), km.group(2)
+                    fm[key] = val.strip()
+                    if val and val[0] not in "\"'|>#&*!%@`" and ": " in val:
+                        fail(errors, f"adapters/{plat} block {i+1}: '{key}' plain scalar contains ': ' "
+                                     f"(breaks strict YAML; quote the value or remove the colon)")
+            if not isinstance(fm, dict):
+                fail(errors, f"adapters/{plat} block {i+1}: frontmatter is not a mapping")
+                continue
+            for field in ADAPTER_REQUIRED:
+                if field not in fm or not str(fm[field]).strip():
+                    fail(errors, f"adapters/{plat} block {i+1}: missing '{field}'")
+            if fm.get("name"):
+                names.add(fm["name"])
+    for skill in SKILLS:
+        if skill not in names:
+            fail(errors, f"adapters: no frontmatter block for skill '{skill}'")
+    ok(f"parsed adapter frontmatter blocks covering {len(names)} skill(s)")
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     flags = {a for a in sys.argv[1:] if a.startswith("--")}
@@ -214,6 +273,7 @@ def main():
     for skill in SKILLS:
         check_skill(root, skill, errors)
     check_shared_sync(root, errors)
+    check_adapters(root, errors)
     # top-level docs
     for doc in ("README.md", "LICENSE", "CHANGELOG.md", "INSTALL.md", "REFERENCES.md", "DESIGN-NOTES.md"):
         if not os.path.isfile(os.path.join(root, doc)):

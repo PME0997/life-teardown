@@ -14,7 +14,10 @@ if (-not (Test-Path $Src)) {
 foreach ($skill in @("behavior-analyst", "problem-diver")) {
     $Dest = Join-Path $Root "skills\$skill\references\shared"
     New-Item -ItemType Directory -Force -Path $Dest | Out-Null
-    Copy-Item -Path (Join-Path $Src "*.md") -Destination $Dest -Force
+    # 只同步两个内核文件；不要复制 shared-src\README.md（源目录说明，不属于分发副本）
+    foreach ($f in @("anti-sycophancy-core.md", "safety-protocol.md")) {
+        Copy-Item -Path (Join-Path $Src $f) -Destination (Join-Path $Dest $f) -Force
+    }
     Write-Output "  synced -> skills\$skill\references\shared\"
 }
 

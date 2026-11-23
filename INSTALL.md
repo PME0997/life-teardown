@@ -16,7 +16,7 @@ curl -fsSL https://raw.githubusercontent.com/PME0997/life-teardown/main/scripts/
 irm https://raw.githubusercontent.com/PME0997/life-teardown/main/scripts/install.ps1 | iex
 ```
 
-脚本会自动：检测平台 → 复制技能到正确目录 → 应用对应 `adapters/` frontmatter → 创建档案根目录 → 打印试用示例。
+脚本会自动：检测平台 → 复制技能到正确目录 → 创建档案根目录 → 打印试用示例。**平台 frontmatter 不会自动替换**，如需平台原生 UI 请按下方手动安装第 3 步应用 `adapters/` 覆盖（可选）。
 
 ---
 

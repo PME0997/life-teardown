@@ -46,6 +46,8 @@ try {
             $Stamp = [int][double]::Parse((Get-Date -UFormat %s))
             Copy-Item -Recurse -Path $Dest -Destination "$Dest.bak.$Stamp"
             Write-Host "    (existing $s backed up)"
+            # 必须删除旧目录再复制：Copy-Item -Recurse 到已存在目录会嵌套成 skill\skill\（加载失败）
+            Remove-Item -Recurse -Force $Dest
         }
         Copy-Item -Recurse -Path (Join-Path $Src.FullName "skills\$s") -Destination $Dest
         if ($Platform -ne "generic") {

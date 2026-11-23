@@ -3,6 +3,21 @@
 All notable changes to Life Teardown are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+- Adapters (qwenwork / claude-code) problem-diver frontmatter: removed ASCII `: ` inside the unquoted description scalar (`Flow:` → `Flow -`) that broke strict YAML loaders; the same bug class previously fixed in skills/ had recurred in adapters/.
+- validate.py: added `check_adapters` so adapter frontmatter blocks are deep-parsed (closes the CI blind spot that let the adapter bug ship).
+- install.sh / install.ps1: remove the backed-up old skill directory before copying, fixing nested `skill/skill/` packaging on upgrade/reinstall.
+- sync-shared.sh / sync-shared.ps1: sync only the two core files instead of `*.md`, so `shared-src/README.md` no longer leaks into distributed copies.
+- make-zip.sh: delete stale zip before re-packing (`zip -rq` updates existing archives and would retain removed entries).
+- safety-protocol: national psychological-aid hotline corrected from 12320 to 12356 (unified since 2025-05); Beijing 010-82951332 retained.
+- REFERENCES.md: restored agent-architecture sources cited by DESIGN-NOTES (MemGPT/Letta, MAST, Anthropic ×2) that were missing from the published version.
+- Docs: INSTALL / adapters README no longer claim installers auto-apply frontmatter; memory-format / archive-format / DESIGN-NOTES archive-root wording aligned with SKILL.md runtime resolution.
+
+### Removed
+- Obsolete one-time `publish-bilingual.ps1` from repo working tree (already executed; archived locally).
+
 ## [0.1.0] - 2026-10-19 — Beta
 
 First public release. Two-skill anti-sycophancy self-inquiry kit for desktop AI agents.
