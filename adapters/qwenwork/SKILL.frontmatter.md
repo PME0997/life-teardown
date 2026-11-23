@@ -16,7 +16,7 @@ argument-hint: Describe the behavior, reaction, or relationship pattern you want
 argument-hint-en: Describe the behavior, reaction, or relationship pattern you want to unpack
 argument-hint-zh: 描述你想拆解的行为、反应或关系模式
 user-invocable: true
-version: 0.1.0
+version: 0.1.1
 ---
 ```
 
@@ -34,6 +34,6 @@ argument-hint: Describe what went wrong, or the decision you're weighing
 argument-hint-en: Describe what went wrong, or the decision you're weighing
 argument-hint-zh: 描述哪件事没做好，或你在纠结的决定
 user-invocable: true
-version: 0.1.0
+version: 0.1.1
 ---
 ```

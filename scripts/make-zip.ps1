@@ -19,6 +19,9 @@ Add-Type -AssemblyName System.IO.Compression | Out-Null
 Add-Type -AssemblyName System.IO.Compression.FileSystem | Out-Null
 
 $srcFull = (Resolve-Path $SrcDir).Path
+# Ensure output directory exists (File.Open does not create parent dirs)
+$outDir = Split-Path -Parent $ZipPath
+if ($outDir -and -not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir -Force | Out-Null }
 # FileMode Create overwrites if exists (no deletion needed)
 $fs = [System.IO.File]::Open($ZipPath, [System.IO.FileMode]::Create)
 $zip = New-Object System.IO.Compression.ZipArchive($fs, [System.IO.Compression.ZipArchiveMode]::Create)

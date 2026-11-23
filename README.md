@@ -150,9 +150,9 @@ Full rationale, rejected designs, and open risks: [DESIGN-NOTES.md](DESIGN-NOTES
 
 ## Status · 状态
 
-**v0.1.0 beta** — design finalized, skills implemented, cross-platform packaging complete. Not yet validated through extended real-world use. The observation plan and success metrics are in [VALIDATION-PLAN.md](VALIDATION-PLAN.md). Feedback and case reports welcome via issues.
+**v0.1.1 beta** — design finalized, skills implemented, cross-platform packaging complete. Not yet validated through extended real-world use. The observation plan and success metrics are in [VALIDATION-PLAN.md](VALIDATION-PLAN.md). Feedback and case reports welcome via issues.
 
-**v0.1.0 beta**——设计定稿、技能已实现、跨平台打包完成，但尚未经长期真实使用验证。观察计划和达标指标见 [VALIDATION-PLAN.md](VALIDATION-PLAN.md)。欢迎通过 issue 反馈和提交案例。
+**v0.1.1 beta**——设计定稿、技能已实现、跨平台打包完成，但尚未经长期真实使用验证。观察计划和达标指标见 [VALIDATION-PLAN.md](VALIDATION-PLAN.md)。欢迎通过 issue 反馈和提交案例。
 
 ## License · 许可
 

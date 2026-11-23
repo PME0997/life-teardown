@@ -1,7 +1,7 @@
 ---
 name: problem-diver
 description: 工作/学习/成长场景中的具体困难拆解与复盘技能。当用户遇到一件具体的事没做好、想复盘找原因和改进方法时使用——例如"方案被否了帮我复盘""做 PPT 总是抓不住重点""开会听懂了但做不出来""别人讲复杂问题我跟不上""汇报思路混乱""面试挂了帮我分析""要不要辞职/换行/搬家"等决策分析。核心流程：事件还原→困难定位→方法论选路（5 Whys/鱼骨图/金字塔/MECE/Issue Tree/奥卡姆/Inversion/80-20/复盘四步法）→根因确认→改进方案。支持双线程协议处理"事+情绪"交织问题（可客座引用 behavior-analyst 方法文件）。不用于情绪疏导、人际关系矛盾、纯心理模式分析（归 behavior-analyst 技能）。English triggers - "help me review what went wrong", "why did my presentation fail", "I understand in meetings but can't execute", "should I quit / move / change careers", "I keep messing up X (task-focused)"。输出语言跟随用户输入语言。
-version: 0.1.0
+version: 0.1.1
 ---
 
 # 困难拆解师（problem-diver）

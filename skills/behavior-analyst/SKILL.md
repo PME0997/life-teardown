@@ -1,7 +1,7 @@
 ---
 name: behavior-analyst
 description: 个人行为与心理模式的客观分析与改变技能。当用户希望拆解自己的行为、习惯、动机或心理想法时使用——例如"我为什么总是拖延""帮我分析我这个习惯从哪来的""我这种想法对不对""我该怎么改掉这个毛病""我和父母总是吵架该怎么处理""最近有点难受但说不清哪里难受""恋爱中总是患得患失正常吗"。通过场景路由唤醒子技能（行为溯源/动机挖掘/模式验证/决策情绪/改变规划/关系拆解/情绪澄清/亲密关系分析），以反谄媚规则保证分析客观，结论沉淀至本地档案实现跨会话模式追踪。不用于心理咨询替代、情绪安抚或日常闲聊。English triggers - "why do I always / keep...", "help me understand my reaction", "is it normal to feel...", "I can't stop / I can't stick to...", "I keep fighting with my parents"。输出语言跟随用户输入语言。
-version: 0.1.0
+version: 0.1.1
 ---
 
 # 行为分析师（主技能 · 路由层）
